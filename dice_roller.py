@@ -1,20 +1,56 @@
+# farkle simulation using Python
 import random
-def main():
-  print('You rolled a die')
 
-if __name__== "__main__":
-  main()
+class player():
+    self.score = 0
+    def roll_dice():
+        num_dice = 6
+        roll_count = 1
+        for i in range(0,num_dice):
+            roll = random.randint(1,6)
+            elif roll == 1:
+                 += 100
+                num_dice -= 1
+                roll_count += 1
+                def roll_again:
+                    roll_again = input('Would you like to roll again? [Y/N] ')
+                        if roll_again == 'Y' and num_dice > 0:
+                            roll_dice()
+                        elif roll_again == 'Y' and num_dice == 0:
+                            num_dice = 6
+                            roll_dice()
+                        else:
+                            print('Next player')
+                roll_again()
+            elif roll == 5:
+                dice_sum += 50
+                num_dice -= 1
+                roll_count += 1
+                roll_again()
+            else:
+                print('Farkle!')
+                roll_count = 1
+                num_dice = 6
 
-dice_rolls = int(input('How many dice would you like to roll? '))
-dice_size = int(input('How many sides are the dice?' ))
-dice_sum = 0
-for i in range(0, dice_rolls):
-    roll = random.randint(1,dice_size)
-    dice_sum += roll
-    if roll == 1:
-        print(f'You rolled a {roll}! Critical Fail')
-    elif roll == 6:
-        print(f'You rolled a {roll}! Critical Success!')
-    else:
-        print(f'You rolled a {roll}')
-print(f'You have rolled a total of {dice_sum}')
+#### setup the game
+# player_count = int(input('How many people are playing? '))
+player1 = player()
+player2 = player()
+players = [player1, player2]
+# if player_count > 2:
+  #  for i in range(3,player_count):
+   #     player = player()
+    #    players.append(player%i)
+
+def gameplay():
+    while player1.score < 10000 and player2.score < 10000:
+        for i in players:
+            print(f'Your score is {i.score}')
+            player.roll_dice()
+    if player1.score >= 10000:
+        print(f'Player 1 wins with {player1.score} points!')
+    elif player2.score >= 10000:
+        print(f'Player 2 wins with {player2.score} points!')
+    
+        
+        
